@@ -67,9 +67,12 @@ function creaCard(immagine, title, Descrizione) {
 
   const btnModifica = document.createElement("a");
   body.appendChild(btnModifica);
-  btnModifica.href = "./back-office.html";
+  // btnModifica.href = "./back-office.html";
   btnModifica.className = "btn btn-success ms-1";
-  btnModifica.textContent = "Modifica";
+  btnModifica.innerText = "Modifica";
+  btnModifica.onclick = function () {
+    window.location.assign("./backoffice.html?agendaId=" + oggetto._id);
+  };
 }
 
 //////////////////////////////////////////////////////////////////77
