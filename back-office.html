@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body data-bs-theme="dark">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
@@ -22,23 +23,27 @@
       <form>
         <div class="mb-3">
           <label for="img" class="form-label">Immagine</label>
-          <input
-            type="text"
-            class="form-control"
-            id="img"
-            placeholder="Inseisci link immagine"
-            aria-describedby="emailHelp"
-          />
+          <input type="text" class="form-control" id="img" placeholder="Inseisci link immagine" required />
         </div>
 
         <div class="mb-3">
           <label for="titolo" class="form-label">Titolo</label>
-          <input type="text" class="form-control" id="titolo" />
+          <input type="text" class="form-control" id="titolo" placeholder="Inserisci titolo" required />
         </div>
 
         <div class="mb-3">
           <label for="Descrizione" class="form-label">Descrizione</label>
-          <input type="text" class="form-control" id="Descrizione" />
+          <input type="text" class="form-control" id="Descrizione" placeholder="Inserisci descrizione" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="brand" class="form-label">Brand</label>
+          <input type="text" class="form-control" id="brand" placeholder="Inserisci brand" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="prezzo" class="form-label">Prezzo</label>
+          <input type="text" class="form-control" id="prezzo" placeholder="Inserisci prezzo" required />
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -51,5 +56,6 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="./back-office.js"></script>
   </body>
 </html>

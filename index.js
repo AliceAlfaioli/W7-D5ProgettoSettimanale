@@ -53,7 +53,7 @@ function creaCard(immagine, title, Descrizione) {
   const p = document.createElement("p");
   body.appendChild(p);
   p.className = "card-text";
-  p.textContent = " Descrizione";
+  p.textContent = Descrizione;
 
   /////////////////////////////////////////////////////
 
@@ -67,10 +67,47 @@ function creaCard(immagine, title, Descrizione) {
 
   const btnModifica = document.createElement("a");
   body.appendChild(btnModifica);
-  btnModifica.className = "btn btn-success";
+  btnModifica.href = "./back-office.html";
+  btnModifica.className = "btn btn-success ms-1";
   btnModifica.textContent = "Modifica";
 }
 
-creaCard("...", "titolo", "descrizione");
-creaCard("...", "titolo", "descrizione");
-creaCard("...", "titolo", "descrizione");
+//////////////////////////////////////////////////////////////////77
+
+const apiKey =
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUxOWRhMjRjNTllYzAwMTk5MGQ2ZmUiLCJpYXQiOjE3MDkyODQ3NzAsImV4cCI6MTcxMDQ5NDM3MH0.F27xMaXhbFyXm1yxF8QawTp0JVYznaozM8mB8ivvnlE";
+const url = "https://striveschool-api.herokuapp.com/api/product/";
+
+fetch(url, {
+  method: "GET",
+
+  headers: {
+    Authorization: apiKey,
+    "Content-Type": "application/json",
+  },
+})
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      if (response.status === 400) {
+        throw new Error("400 - Errore lato client");
+      }
+      if (response.status === 404) {
+        throw new Error("404 - Dato non trovato");
+      }
+      if (response.status === 500) {
+        throw new Error("500 - Errore lato server");
+      }
+      throw new Error("Errore nel reperimento dati");
+    }
+  })
+  .then((newAppointment) => {
+    //oggetto che abbiamo nel server
+    console.log(newAppointment);
+
+    newAppointment.forEach((oggetto) => {
+      creaCard(oggetto.imageUrl, oggetto.name, oggetto.description);
+    });
+  })
+  .catch((err) => console.log(err));
