@@ -13,7 +13,7 @@ const id = new URLSearchParams(window.location.search).get("idProdotto");
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////qua siamo nella modalità modifica
 if (id !== null) {
-  btnSubmit.className = "btn btn-success";
+  btnSubmit.className = "btn btn-info";
   btnSubmit.textContent = "Modifica";
 
   fetch(url + id, {
