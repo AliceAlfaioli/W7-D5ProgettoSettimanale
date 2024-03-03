@@ -48,12 +48,12 @@ function creaCard(immagine, title, descrizione, id) {
 
   const btnDettaglio = document.createElement("a");
   btnDettaglio.href = `./detail.html?idProdotto=${id}`;
-  btnDettaglio.className = "btn btn-warning  bg-warning bg-gradient me-2";
+  btnDettaglio.className = "btn btn-warning  bg-warning bg-gradient opacity-75 me-2";
   btnDettaglio.innerText = "Info";
 
   const btnModifica = document.createElement("a");
   btnModifica.href = `./back-office.html?idProdotto=${id}`;
-  btnModifica.className = "btn btn-info bg-info bg-gradient me-2";
+  btnModifica.className = "btn btn-info bg-info bg-gradient me-2 opacity-75";
   btnModifica.innerText = "Modifica";
 
   row.appendChild(col);
