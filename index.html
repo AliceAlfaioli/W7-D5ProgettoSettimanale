@@ -14,7 +14,7 @@
 
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg bg-warning bg-gradient">
+    <nav class="navbar navbar-expand-lg" style="background-color: #ffb3b3">
       <div class="container-fluid">
         <a class="navbar-brand fs-4" href="#">SHAMPoOA</a>
         <button
@@ -41,9 +41,85 @@
       </div>
     </nav>
 
-    <div class="container mt-5">
+    <!-- CAROUSEL -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://cdn-hagad.nitrocdn.com/AOtZOWSwvStQpVdaDWSWFTVscvsNsbDC/assets/images/optimized/rev-d59a971/www.smilehairclinic.com/it/wp-content/uploads/2023/07/Roadmap-to-Grow-Hair-Naturally.jpg"
+            class="d-block w-100"
+            alt="..."
+            height="500"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://cdn.notinoimg.com/images/gallery/ba/19/it_desk_hp_sale30_w08_24_02.jpg"
+            class="d-block w-100"
+            alt="..."
+            height="500"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://media-pierre-fabre.wedia-group.com/api/wedia/dam/transform/u5wa3z31qn5setke938po44zhe89b916z43f76e/kl_quinine_lifestyle_cyrielle_2022_banner?t=crop&width=1.000&height=1.000"
+            class="d-block w-100"
+            alt="..."
+            height="500"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container-fluid mt-5">
       <div class="row gy-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded"></div>
     </div>
+
+    <footer class="footer mt-auto py-4" style="background-color: black">
+      <div class="container text-center">
+        <span class="text-muted">© 2024 SHAMPoOA</span>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
